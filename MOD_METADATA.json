@@ -1,0 +1,44 @@
+{
+  "schema_version": "vllm-hust-mod-metadata-v1",
+  "mod_id": "org.vllm-hust.stateaxis-dynamic-microbatch",
+  "repository": "stateaxis-dynamic-microbatch",
+  "display_name": "stateaxis-dynamic-microbatch",
+  "canonical_repository": "https://github.com/intellistream/stateaxis-dynamic-microbatch",
+  "responsibility": {
+    "organization": "intellistream",
+    "maintainers": [
+      {
+        "name": "Shuhao Zhang (Tony)",
+        "github": "ShuhaoZhangTony"
+      }
+    ],
+    "advisor_status": "not_declared",
+    "advisors": []
+  },
+  "lifecycle": {
+    "status": "experimental",
+    "default_enabled": false,
+    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
+    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+  },
+  "scope": {
+    "mechanism": "dynamic_dual_microbatch_overlap",
+    "supported_workloads": [],
+    "out_of_scope": [
+      "general performance claims",
+      "automatic inheritance from StateAxis aggregate evidence"
+    ]
+  },
+  "evidence": {
+    "qualification": "not-beneficial-in-tested-cell",
+    "latest_result": "evidence/RESULTS.md",
+    "index": "EVIDENCE.md",
+    "performance_claims": [
+      {
+        "label": "not-beneficial-in-tested-cell",
+        "scope": "frozen StateAxis source evidence only",
+        "result": "Warm paths could be exact, while cold execution produced a token mismatch."
+      }
+    ]
+  }
+}
