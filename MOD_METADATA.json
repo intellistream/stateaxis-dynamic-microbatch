@@ -18,26 +18,28 @@
   "lifecycle": {
     "status": "experimental",
     "default_enabled": false,
-    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
-    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+    "activation_contract": "Extension Manager verifies RESEARCH_MANIFEST.json, forwards the hash-bound experimental B16-to-8+8 policy, and StateAxis admits only the matching host contract.",
+    "rollback_contract": "Disable the extension; StateAxis then removes the 10 ms dynamic batch window and clears the worker dual-microbatch environment before spawn."
   },
   "scope": {
     "mechanism": "dynamic_dual_microbatch_overlap",
-    "supported_workloads": [],
+    "supported_workloads": [
+      "experimental greedy B16 decode without adapters or copy-on-write"
+    ],
     "out_of_scope": [
       "general performance claims",
       "automatic inheritance from StateAxis aggregate evidence"
     ]
   },
   "evidence": {
-    "qualification": "not-beneficial-in-tested-cell",
-    "latest_result": "evidence/RESULTS.md",
+    "qualification": "correctness-negative-in-tested-cells",
+    "latest_result": "evidence/ecpa-contract-20261010/RESULT.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
-        "label": "not-beneficial-in-tested-cell",
-        "scope": "frozen StateAxis source evidence only",
-        "result": "Warm paths could be exact, while cold execution produced a token mismatch."
+        "label": "real-npu-correctness-negative",
+        "scope": "StateAxis issue 56 frozen real-NPU B16 experiments",
+        "result": "Warm paths were exact, but repeated fresh-process cold paths produced token mismatches. The single throughput observation is not a performance claim."
       }
     ]
   }

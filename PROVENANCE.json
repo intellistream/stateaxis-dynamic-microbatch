@@ -9,7 +9,14 @@
   "copied_evidence": "evidence/RESULTS.md",
   "copied_evidence_sha256": "21d225211eb1fb66fc781a9da5c5f08364499fa03d0ef3a59e54bbaa923ec213",
   "qualification_inherited": false,
-  "implementation_extracted": false,
+  "implementation_extracted": true,
+  "implementation_boundary": {
+    "carrier": "stateaxis_host_builtin",
+    "research_manifest": "RESEARCH_MANIFEST.json",
+    "research_manifest_sha256": "1b59c6852ac1618ef12b9e454703576d0b99bb748787a80b8e8081c0ee289613",
+    "host_symbol": "statecentric_engine:parse_dynamic_microbatch_additional_config",
+    "performance_qualified": false
+  },
   "licensing": {
     "scaffolding": "Apache-2.0",
     "copied_evidence": "No additional license grant is inferred from this split."
