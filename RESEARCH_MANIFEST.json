@@ -1,0 +1,47 @@
+{
+  "schema_version": "stateaxis-research-mod/v1",
+  "mod_id": "org.vllm-hust.stateaxis-dynamic-microbatch",
+  "version": "0.2.0",
+  "mechanism": {
+    "name": "dynamic-dual-microbatch-overlap",
+    "dynamic_batching": true,
+    "dual_microbatch": true,
+    "batch_window_us": 10000,
+    "scheduler_max_batch_size": 32,
+    "decode_batch_rows": 16,
+    "lane_rows": 8,
+    "require_greedy": true,
+    "forbid_cow": true,
+    "fail_closed": true
+  },
+  "host_contract": {
+    "provider": "stateaxis",
+    "api_range": ">=1,<2",
+    "implementation": "statecentric_engine:parse_dynamic_microbatch_additional_config",
+    "effect_counters": [
+      "dynamic_batching_early_releases",
+      "dynamic_batching_window_expirations",
+      "dual_microbatch_candidate_batches",
+      "worker_dual_microbatch_decisions",
+      "worker_dual_microbatch_authority_applied",
+      "worker_dual_microbatch_fallbacks",
+      "worker_dual_microbatch_overlap_ns"
+    ]
+  },
+  "qualification": {
+    "performance_qualified": false,
+    "evidence_label": "real-npu-correctness-negative",
+    "scope": "StateAxis issue 56 frozen B16 dynamic/dual-microbatch experiments",
+    "result": "Warm paths were exact, but repeated fresh-process cold paths produced token mismatches; no performance claim is admitted.",
+    "blockers": [
+      "cold-path exactness is not reproducible",
+      "the single throughput observation was not repeated",
+      "the full matched real-online matrix was not completed"
+    ]
+  },
+  "source": {
+    "repository": "Qixin-Gaoke/stateaxis",
+    "commit": "7562b5fa6f42e2e045a877b53ac934739e2cf230",
+    "issue": 56
+  }
+}

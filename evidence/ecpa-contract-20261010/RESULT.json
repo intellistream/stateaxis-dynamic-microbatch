@@ -1,0 +1,52 @@
+{
+  "schema_version": "stateaxis-mod-on-off/v1",
+  "date_utc": "2026-10-10",
+  "mod_id": "org.vllm-hust.stateaxis-dynamic-microbatch",
+  "mod_version": "0.2.0",
+  "research_manifest_sha256": "1b59c6852ac1618ef12b9e454703576d0b99bb748787a80b8e8081c0ee289613",
+  "evidence_label": "manager-contract-mock-worker-non-performance",
+  "performance_qualified": false,
+  "hardware_execution": false,
+  "model": null,
+  "workload": "deterministic StateAxis native-protocol mock worker",
+  "matched_on_off": {
+    "off": {
+      "mod_identity_present": false,
+      "worker_dual_microbatch_environment_present": false,
+      "dual_microbatch_candidate_batches": 0
+    },
+    "on": {
+      "mod_identity_present": true,
+      "worker_dual_microbatch_environment": "1",
+      "decode_batch_rows": 16,
+      "lane_rows": 8,
+      "dual_microbatch_candidate_batches": ">=1",
+      "requests": 16,
+      "output_tokens_per_request": 2,
+      "exact_mock_output": [40, 40]
+    }
+  },
+  "validation": {
+    "python_tests": "3 passed",
+    "ruff": "passed",
+    "rust_targeted_tests": "2 passed",
+    "rust_library_tests": "405 passed",
+    "cargo_check_all_targets": "passed",
+    "native_state_engine_build": "passed",
+    "extension_manager_inspect_check_plan_dry_run": "passed",
+    "managed_assembly_check_process": "passed"
+  },
+  "historical_real_npu_result": {
+    "evidence_label": "real-npu-correctness-negative",
+    "warm_path": "exact in recorded runs",
+    "cold_path": "token mismatches repeated across fresh processes",
+    "single_unrepeated_throughput_observation": "47.156% below control",
+    "disposition": "rejected; no performance claim"
+  },
+  "limitations": [
+    "mock worker only for the current activation-contract ON/OFF check",
+    "no accelerator kernels or model weights executed",
+    "worker-authoritative dual-microbatch applied/fallback/overlap counters require a future corrected real-NPU run",
+    "cold-path exactness remains unresolved"
+  ]
+}
