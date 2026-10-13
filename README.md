@@ -33,6 +33,8 @@ could be exact, but repeated fresh-process cold paths produced token mismatches.
 One earlier throughput observation was 47.156% below control and was not
 repeated; it is not a performance result. The full matched real-online matrix
 was therefore not completed.
+The complete R8 stop bundle is vendored under
+`evidence/issue56-dynamic-batching-20260814-r8-matrix/`.
 
 `evidence/ecpa-contract-20261010/` proves only manager activation, strict host
 identity binding, matched mock-worker ON/OFF behavior, effect counting,

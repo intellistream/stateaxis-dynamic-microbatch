@@ -1,0 +1,10 @@
+{
+  "completed": false,
+  "exit_code": 1,
+  "format": "statecentric-issue56-matrix-status-v8",
+  "performance_claim": false,
+  "physical_npu": 3,
+  "repetitions_per_arm": 3,
+  "schema_version": 1,
+  "speedup_claim": false
+}

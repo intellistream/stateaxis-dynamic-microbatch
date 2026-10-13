@@ -19,6 +19,10 @@
   in `PROVENANCE.json`.
 - Result: warm paths could be exact, but repeated fresh-process cold paths
   produced token mismatches. No performance claim is admitted.
+- Complete R8 stop bundle:
+  `evidence/issue56-dynamic-batching-20260814-r8-matrix/`, including the
+  matched pair, raw cold/warm requests, activation and NPU records, failure
+  provenance, cleanup state, and a repo-local SHA-256 manifest.
 
 Preflight records under `evidence/on-off-preflight-20261010/` describe the
 superseded import-only version and are retained as historical negative evidence.
