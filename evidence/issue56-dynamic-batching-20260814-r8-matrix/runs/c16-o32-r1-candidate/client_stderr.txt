@@ -1,0 +1,2 @@
+native independent-cold validation failed: {'passed': False, 'oracle_mismatch_ordinals': [5, 6, 7, 10], 'oracle_mismatches_are_informational': False, 'output_length_mismatch_ordinals': [], 'reuse_mismatch_ordinals': [], 'state_leak_ordinals': []}
+independent cold/warm pair exact lifecycle failed

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "runtime": "native-rust-cpp-acl",
+  "container_id": "7923bfe40d091581083ea0f2e70a3a480eeaf58ea973861f56e5e20db15ed0ba",
+  "container_image_id": "sha256:f4c89c293e076453e9eef9edb5fb9669740dccbd3c48619a9f976d775fc29b81",
+  "native_server_ldd_sha256": "e1bb30dc796fd7544bb918ad26051208c63221f77363e7e7a28e908987411a08",
+  "native_executor_ldd_sha256": "2d88d4c17054c47abefbb56f1ebbe4bb02bf7867ed94a9f9137f3cea2321e87d",
+  "execution_artifact_identity_sha256": "3a39fc0a26b865e9e99d76acc93bf5ae7bce3bcef26b8b570aa8dce740359756",
+  "bound_dependencies": {
+    "libascendcl": "94edd165d95210c2a46c52f77f0215cb64e78c42176a451f8e118daccfa912fe",
+    "libopapi": "57e43bac33f22ad7f055210448c26e7978eddb28ef7ec5daa962df62fd91d732",
+    "libnnopbase": "65cb1b69479756f6a59ccefeedf439c2ef3d69df04ecac5a10ac82552b315223",
+    "compiler_build": "47eff32b683583c42404ac46c53d1f49e7b88ee5c24fcb6ec42f219291b498b8",
+    "lowering": "b9db9f0871b331550e0478da5614ef16b1caf676dbc41bf48f2c8cb7973a99e1",
+    "project_kernel": "b68d48bd306539c8664309ee9e1c9cd606f6dc47df46d4abc3f29b6327d7c22f",
+    "operator_library": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}

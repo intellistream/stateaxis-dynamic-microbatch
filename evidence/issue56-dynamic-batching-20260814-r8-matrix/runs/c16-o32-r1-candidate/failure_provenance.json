@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "exit_code": 1,
+  "parent_start": {
+    "commit": "36e81c101447533e7a6a3deefed35e59233cf65e",
+    "tree": "249e221421717852651e8374df25de681e307631",
+    "branch": "codex/issue56-dynamic-batching",
+    "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "parent_end": {
+    "commit": "36e81c101447533e7a6a3deefed35e59233cf65e",
+    "tree": "249e221421717852651e8374df25de681e307631",
+    "branch": "codex/issue56-dynamic-batching",
+    "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "artifacts": {
+    "npu_after_sha256": "8214251dab167d24ada699dd35e6bbc8be83e301c7aff9d764d698632104c54a",
+    "scoped_port_after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host_process_after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "container_process_after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
